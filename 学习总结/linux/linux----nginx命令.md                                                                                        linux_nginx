@@ -1,0 +1,36 @@
+进入沙盒虚拟环境
+
+nohup python manage.py &
+
+appending output to 'nohup.out'
+
+启动Nginx服务
+
+/opt/openresty/nginx/sbin/nginx
+
+域名可以有多个,用空格隔开  默认80端口 
+
+server_name www.jd.com  jd.com  47.98.229.145;
+
+重启ngix 服务
+
+ /opt/openresty/nginx/sbin/nginx -s reload
+ /opt/openresty/nginx/sbin/nginx -t
+
+修改配置
+
+修改  vim  /opt/openresty/nginx/conf/nginx.conf 
+
+ps -ef | grep python 
+
+ps -ef | grep nohup
+
+ps -ef | grep nginx
+
+kill -9 进程号
+
+### 部署django:
+
+pip install gunicorn
+
+pwd 查询路径
